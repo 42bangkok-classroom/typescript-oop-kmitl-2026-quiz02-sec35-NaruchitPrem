@@ -21,10 +21,12 @@ export const getPostsByUser = async (userId: number): Promise<PostResult[]> => {
     }
     const result: PostResult[] = [];
     for (const post of data){
+      if (post.userId === userId){
         result.push({
           id: post.id,
           title: post.title
         });
+      }
     }
     return result;
 
