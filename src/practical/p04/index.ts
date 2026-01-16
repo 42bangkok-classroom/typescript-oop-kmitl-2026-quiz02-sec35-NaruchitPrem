@@ -25,7 +25,7 @@ export const countCommentsByPost = async (): Promise<CommentCount> => {
       }
      
       if (result[postId]) {
-        result[postId] = result[postId];
+        result[postId] = result[postId] + 1;
       } else {
         result[postId] = 1;
       }
